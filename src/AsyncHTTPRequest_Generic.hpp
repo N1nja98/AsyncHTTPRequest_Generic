@@ -314,13 +314,15 @@ class AsyncHTTPRequest
       SAFE_DELETE_ARRAY(query)
     }
   };
+ 
+	////////////////////////////////////////
 
-  typedef std::function<void(void*, AsyncHTTPRequest*, int readyState)> readyStateChangeCB;
-  typedef std::function<void(void*, AsyncHTTPRequest*, size_t available)> onDataCB;
-    
-  ////////////////////////////////////////
-    
   public:
+	
+    typedef std::function<void(void*, AsyncHTTPRequest*, int readyState)> readyStateChangeCB;
+    typedef std::function<void(void*, AsyncHTTPRequest*, size_t available)> onDataCB;
+    
+    
     AsyncHTTPRequest();
     ~AsyncHTTPRequest();
 
